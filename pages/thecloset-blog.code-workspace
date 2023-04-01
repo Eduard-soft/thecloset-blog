@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../the-closet-blog/components/components"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "thecloset-blog"
+	}
+}
