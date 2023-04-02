@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@400;700&display=swap");
 
 html,
 body,
 button {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Changa', sans-serif;
     font-size: 18px;
 }
 
@@ -12,7 +12,7 @@ button {
     box-shadow: none;
 }
 
-@media only screen and (max-width: 1150) {
+@media only screen and (max-width: 1150px) {
     html,
     body,
     button {

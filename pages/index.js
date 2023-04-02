@@ -1,14 +1,23 @@
 import Head from 'next/head'
 import Image from 'next/image'
 //import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.scss'
+//import styles from '@/styles/Home.module.scss'
+import { Section, Cover, SocialNetworks, BuyMeCoffee, Title } from '@/components'
+
 
 //const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <div>
-      THE CLOSET
+      <Section>
+        <Cover title="THE CLOSET"/>
+        <SocialNetworks />
+        <BuyMeCoffee />
+      </Section>
+      <Section>
+        <Title>New Post</Title>
+      </Section> 
     </div>
   )
 }
