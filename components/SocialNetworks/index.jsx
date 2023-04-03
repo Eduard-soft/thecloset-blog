@@ -1,10 +1,9 @@
 import React from 'react';
 import cl from 'classnames';
 
-import { AFaTelegram, FiInstagram, SlSocialVkontakte } from "react-icons/ai";
-
-import styles from './index.module.scss';
-import { SocialNetworks } from '..';
+import { AFaTelegram, FiInstagram, SlSocialVkontakte } from "react-icons/ai"
+import ScreenEgg from '../ScreenEgg';
+import styles from './index.module.scss'; 
 
 const socialNetworks = [
 	{
@@ -28,6 +27,7 @@ const SocialNetwork = ({
 	className,
 }) => {
 	return (
+		<ScreenEgg type="left">
 		<ul className={cl(className, styles.list)}>
 			{socialNetworks.map((socialNetwork) => (
 					<li
@@ -36,20 +36,22 @@ const SocialNetwork = ({
 					>
 						<a
 							href={socialNetworks.href}
-							target="blank"
+							target="_blank"
 							className={styles.listLink}
-						>
+							rel="noreferrer"
+						>icon!!!!
 							{/* {React.createElement(
-								socialNetwork.icon,
+								socialNetwork.icon, 
 								{
-									color: 'black',
-									size: 50
+								color: 'black',
+							  size: 50
 								}
 							)} */}
 						</a>
 					</li>	
 				))}
 		</ul>
+		</ScreenEgg>
 	)
 }
 

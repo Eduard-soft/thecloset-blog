@@ -1,12 +1,22 @@
 import React from 'react';
 import cl from 'classnames';
-import style from './index.module.scss';
+import styles from './index.module.scss';
 
 const ScreenEgg = ({
 	className,
+	type,
+	children
 }) => {
 	return (
-		<div>ScreenEgg</div>
+		<div className={cl(
+			className,
+			styles.ScreenEgg,
+			type === 'right' 
+			? styles.ScreenEggRight 
+			: styles.ScreenEggLeft
+		)}>
+			{children}
+		</div>
 	)
 }
 
