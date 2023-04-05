@@ -1,12 +1,15 @@
 import React from 'react';
 import cl from 'classnames';
-import style from './index.module.scss';
+import styles from './index.module.scss';
 
 const PostGrid = ({
 	className,
+	children
 }) => {
 	return (
-		<div>PostGrid</div>
+		<div className={cl(className, styles.postGrid)}>
+			{children}
+		</div>
 	)
 }
 

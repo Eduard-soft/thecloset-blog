@@ -4,9 +4,14 @@ import style from './index.module.scss';
 
 const Post = ({
 	className,
+	image,
+	title,
+	description,
+	slug
 }) => {
+	console.log(title)
 	return (
-		<div>Post</div>
+		<div>{title}</div>
 	)
 }
 

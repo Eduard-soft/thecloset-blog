@@ -1,15 +1,20 @@
-import Head from 'next/head'
-import Image from 'next/image'
-//import { Inter } from '@next/font/google'
-//import styles from '@/styles/Home.module.scss'
-import { Section, Cover, SocialNetworks, BuyMeCoffee, Title } from '@/components'
+import Head from 'next/head';
+import Image from 'next/image';
+import React, {useState} from 'react'
+import { Section,
+         Cover,
+         SocialNetworks,
+         BuyMeCoffee,
+         PostGrid,
+         Post } from '@/components'
 
-import { loadPosts } from './api/posts';
+import {loadPosts} from './api/posts';
 
-//const inter = Inter({ subsets: ['latin'] })
 const LOAD_MORE_STEP = 4;
 
 export default function Home({ initialPosts,total}) {
+
+ const [posts, setPosts] = useState(initialPosts);
   return (
     <div>
       <Section>
@@ -19,13 +24,21 @@ export default function Home({ initialPosts,total}) {
       </Section>
       <Section>
         <Title>New Post</Title>
+        <PostGrid>
+          {posts.map((post) => (
+            <Post>
+              key={post.slug.current}
+              {...post}
+            </Post>
+          ))}
+        </PostGrid>
       </Section> 
     </div>
   )
 }
 
 export const getServerSideProps = async () => {
-  const { posts, total } = await loadData(0, LOAD_MORE_STEP)
+  const { posts, total } = await loadPosts(0, LOAD_MORE_STEP)
 
   return {
     props: {
