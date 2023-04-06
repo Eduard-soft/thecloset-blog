@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Image from 'next/image';
+//import Head from 'next/head';
+import { Title } from '@/components';
 import React, {useState} from 'react'
 import { Section,
          Cover,

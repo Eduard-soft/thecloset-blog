@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import cl from 'classnames';
 import style from './index.module.scss';
 
